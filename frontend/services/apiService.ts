@@ -2,7 +2,7 @@
 import { Feedback, StaffInsight, User, UserRole } from "../types";
 import { analyzeFeedback, generateStaffInsights } from "./geminiService";
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 const LOCAL_STORAGE_KEY = 'feedtrack_local_db';
 const USERS_STORAGE_KEY = 'feedtrack_users_db';
 
@@ -169,6 +169,29 @@ export const apiService = {
       console.warn("Backend offline. Generating insights using client-side AI.");
       const feedbacks = getLocalData();
       return await generateStaffInsights(feedbacks);
+    }
+  },
+
+  /**
+   * Downloads feedback as CSV
+   */
+  async downloadFeedbacks(): Promise<void> {
+    try {
+      const response = await fetch(`${API_BASE_URL}/feedback/export`);
+      if (!response.ok) throw new Error('Download failed');
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'feedback_export.csv';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Download failed", error);
+      alert("Failed to download feedback. Please try again.");
     }
   }
 };

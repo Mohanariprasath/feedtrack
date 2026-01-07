@@ -80,8 +80,44 @@ const createFeedback = async (req, res) => {
     }
 };
 
+// @desc    Export feedback as CSV
+// @route   GET /api/feedback/export
+// @access  Public (Staff only technically)
+const exportFeedback = async (req, res) => {
+    try {
+        let feedbacks;
+        if (!isDbConnected()) {
+            feedbacks = await mockStore.getFeedbacks();
+        } else {
+            feedbacks = await Feedback.find().sort({ createdAt: -1 });
+        }
+
+        const headers = ['Student Name', 'Category', 'Feedback'];
+        const csvRows = [headers.join(',')];
+
+        feedbacks.forEach(feedback => {
+            const row = [
+                `"${feedback.studentName || 'Anonymous'}"`,
+                `"${feedback.category || 'Others'}"`,
+                `"${(feedback.feedbackText || '').replace(/"/g, '""')}"` // Escape double quotes
+            ];
+            csvRows.push(row.join(','));
+        });
+
+        const csvString = csvRows.join('\n');
+
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', 'attachment; filename="feedback_export.csv"');
+        res.status(200).send(csvString);
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 module.exports = {
     getAllFeedback,
     getStudentFeedback,
-    createFeedback
+    createFeedback,
+    exportFeedback
 };
