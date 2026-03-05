@@ -1,4 +1,4 @@
-# 🎓 FeedTrack: AI-Powered Student Feedback Analytics
+#  FeedTrack: AI-Powered Student Feedback Analytics
 
 <p align="center">
   <em>A modern, AI-powered platform bridging the communication gap between students and academic staff through real-time sentiment analysis and actionable insights.</em>
@@ -15,22 +15,22 @@
 
 ---
 
-## ✨ Why FeedTrack?
+##  Why FeedTrack?
 
 Traditional feedback mechanisms are often slow, manual, and ignore the nuance of student sentiment. **FeedTrack** changes this by leveraging the power of **Google Gemini AI** to provide instant sentiment categorization, anomaly detection, and automated reporting.
 
-## 🚀 Key Features
+##  Key Features
 
-*   **🧠 AI-Driven Sentiment Analysis**: Automatic categorization and sentiment scoring powered by Google Gemini.
-*   **👥 Dual Portal System**: Dedicated, secure portals for Students (to submit feedback) and Staff (to analyze data).
-*   **📊 Real-Time Analytics Dashboard**: Visualize sentiment trends, category distribution, and department-wise analysis instantly.
-*   **🚨 Smart Alerts**: Automatic notifications for hyper-critical, urgent, or highly negative feedback.
-*   **📄 PDF Report Generation**: One-click downloadable summaries for quick departmental reviews.
-*   **🎨 Glassmorphism UI**: A premium, highly responsive modern interface built with smooth animations and intuitive design.
+*   ** AI-Driven Sentiment Analysis**: Automatic categorization and sentiment scoring powered by Google Gemini.
+*   ** Dual Portal System**: Dedicated, secure portals for Students (to submit feedback) and Staff (to analyze data).
+*   ** Real-Time Analytics Dashboard**: Visualize sentiment trends, category distribution, and department-wise analysis instantly.
+*   ** Smart Alerts**: Automatic notifications for hyper-critical, urgent, or highly negative feedback.
+*   ** PDF Report Generation**: One-click downloadable summaries for quick departmental reviews.
+*   ** Glassmorphism UI**: A premium, highly responsive modern interface built with smooth animations and intuitive design.
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Frontend Hub
 *   **Core**: React 19, TypeScript
@@ -49,7 +49,7 @@ Traditional feedback mechanisms are often slow, manual, and ignore the nuance of
 
 ---
 
-## 📁 Project Architecture
+##  Project Architecture
 
 ```plaintext
 feedtrack/
@@ -72,7 +72,7 @@ feedtrack/
 
 ---
 
-## 🏁 Getting Started
+##  Getting Started
 
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
@@ -120,7 +120,7 @@ Visit `http://localhost:5173` (or the port specified by Vite) in your browser.
 
 ---
 
-## 📡 Core API Structure
+##  Core API Structure
 
 | Scope | Endpoint | Method | Description |
 | :--- | :--- | :--- | :--- |
@@ -133,7 +133,7 @@ Visit `http://localhost:5173` (or the port specified by Vite) in your browser.
 
 ---
 
-## 🤖 Inside the AI Engine
+##  Inside the AI Engine
 
 FeedTrack relies on **Google Gemini AI** to transform raw, unstructured student text into structured insights. 
 When feedback is submitted, the AI pipeline executes:
@@ -143,13 +143,13 @@ When feedback is submitted, the AI pipeline executes:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
 
-## 📄 License
+##  License
 
 This project is open-source and available under the **ISC License**.
 
 ---
-<p align="center">Made with ❤️ for better education.</p>
+<p align="center">Made with for better education.</p>
