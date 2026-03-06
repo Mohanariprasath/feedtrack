@@ -17,11 +17,11 @@
 
 ##  Why FeedTrack?
 
-Traditional feedback mechanisms are often slow, manual, and ignore the nuance of student sentiment. **FeedTrack** changes this by leveraging the power of **Google Gemini AI** to provide instant sentiment categorization, anomaly detection, and automated reporting.
+Traditional feedback mechanisms are often slow, manual, and ignore the nuance of student sentiment. **FeedTrack** changes this by leveraging the power of **Groq AI** to provide instant sentiment categorization, anomaly detection, and automated reporting.
 
 ##  Key Features
 
-*   ** AI-Driven Sentiment Analysis**: Automatic categorization and sentiment scoring powered by Google Gemini.
+*   ** AI-Driven Sentiment Analysis**: Automatic categorization and sentiment scoring powered by Groq AI.
 *   ** Dual Portal System**: Dedicated, secure portals for Students (to submit feedback) and Staff (to analyze data).
 *   ** Real-Time Analytics Dashboard**: Visualize sentiment trends, category distribution, and department-wise analysis instantly.
 *   ** Smart Alerts**: Automatic notifications for hyper-critical, urgent, or highly negative feedback.
@@ -44,7 +44,7 @@ Traditional feedback mechanisms are often slow, manual, and ignore the nuance of
 *   **Authentication**: JWT & Bcrypt.js
 
 ### AI & Deployment
-*   **Intelligence Engine**: Google Gemini AI (`@google/genai`)
+*   **Intelligence Engine**: Groq AI
 *   **Hosting**: Vercel (Frontend & Serverless API Support)
 
 ---
@@ -135,7 +135,7 @@ Visit `http://localhost:5173` (or the port specified by Vite) in your browser.
 
 ##  Inside the AI Engine
 
-FeedTrack relies on **Google Gemini AI** to transform raw, unstructured student text into structured insights. 
+FeedTrack relies on **Groq AI** to transform raw, unstructured student text into structured insights. 
 When feedback is submitted, the AI pipeline executes:
 1.  **Topic Allocation**: Maps the feedback into domains like *Academics, Facilities, Faculty, Extracurricular*.
 2.  **Sentiment Extraction**: Scores the emotional weight of the text (Positive, Neutral, Negative).
@@ -152,4 +152,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 This project is open-source and available under the **ISC License**.
 
 ---
-<p align="center">Made with for better education.</p>
